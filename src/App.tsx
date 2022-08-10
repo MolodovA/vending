@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactElement, useEffect } from 'react';
 
-function App() {
+import { useSelector } from 'react-redux';
+
+import style from './app.module.scss';
+
+import { Dashboard } from 'components/dashboard/Dashboard';
+import { Display } from 'components/display/Display';
+import { useAppDispatch } from 'hooks/hooks';
+import { selectStatus } from 'store/selectors/selectStatus';
+import { getProductsData } from 'store/thunks/productsThunk';
+
+const App = (): ReactElement => {
+  const dispatch = useAppDispatch();
+  const status = useSelector(selectStatus);
+
+  useEffect(() => {
+    dispatch(getProductsData());
+  }, []);
+
+  if (status === 'loading') {
+    return <div className={style.loading}>Подождите, идёт загрузка...</div>;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      <Display />
+      <Dashboard />
     </div>
   );
-}
+};
 
 export default App;
