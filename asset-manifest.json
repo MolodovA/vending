@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vending/static/css/main.ca678290.css",
+    "main.js": "/vending/static/js/main.227f0ded.js",
+    "static/js/787.29a2e923.chunk.js": "/vending/static/js/787.29a2e923.chunk.js",
+    "index.html": "/vending/index.html",
+    "main.ca678290.css.map": "/vending/static/css/main.ca678290.css.map",
+    "main.227f0ded.js.map": "/vending/static/js/main.227f0ded.js.map",
+    "787.29a2e923.chunk.js.map": "/vending/static/js/787.29a2e923.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca678290.css",
+    "static/js/main.227f0ded.js"
+  ]
+}
