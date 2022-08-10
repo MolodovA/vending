@@ -4,4 +4,4 @@
 3. Машина Принимает купюры номиналом 50, 100, 200 и 500 рублей;
 4. Выдаёт сдачу монетами номиналом 10, 5, 2 и 1 рубль;
 
-Stack : React, Redux, Redux-Thunk, SASS 
+Stack : React,Type Script, Redux, Redux-Thunk, SASS 
