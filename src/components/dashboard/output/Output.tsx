@@ -56,6 +56,7 @@ export const Output: FC<OutputProps> = ({
       </div>
       <div className={style.selectedProduct}>
         {selectedProduct ? (
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
           <div className={style.out} onClick={onResetFormClick}>
             <h3>{label}</h3>
             <p>{description}</p>
